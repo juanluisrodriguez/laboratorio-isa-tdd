@@ -38,5 +38,18 @@ describe('Calculadora', () => {
 
         //Assert
         expect(result).toBe(expectedResult);
+    });
+
+    it('al sumar 2 más -6 devuelve -4', () => {
+        //Arrange
+        const firstNumber = 2;
+        const secondNumber = -6;
+        const expectedResult = -4;
+
+        //Act
+        const result = Calculadora.add(firstNumber, secondNumber);
+
+        //Assert
+        expect(result).toBe(expectedResult);
     })
 });
