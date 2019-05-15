@@ -12,5 +12,18 @@ describe('Calculadora', () => {
 
     //Assert
     expect(result).toBe(expectedResult);
+  });
+
+  it('al sumar 6 más 8 devuelve 14', () => {
+    //Arrange
+    const firstNumber = 6;
+    const secondNumber = 8;
+    const expectedResult = 14;
+
+    //Act
+    const result = Calculadora.add(firstNumber,secondNumber);
+
+    //Assert
+    expect(result).toBe(expectedResult);
   })
 });
