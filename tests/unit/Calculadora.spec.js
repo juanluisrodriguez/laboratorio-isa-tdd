@@ -76,5 +76,17 @@ describe('Calculadora', () => {
 
         //Assert
         expect(result1).toBe(result2);
-    })
+    });
+
+    it('Si el primer parámetro es una letra devuelve NaN', () => {
+        //Arrange
+        const firstNumber = "a";
+        const secondNumber = 5;
+
+        //Act
+        const result = Calculadora.add(firstNumber, secondNumber);
+
+        //Assert
+        expect(result).toBe(NaN);
+    });
 });
