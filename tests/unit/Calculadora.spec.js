@@ -56,7 +56,7 @@ describe('Calculadora', () => {
 
         it('Al sumar 0 a cualquier valor devuelve el mismo valor', () => {
             //Arrange
-            const firstNumber = Math.floor(Math.random());
+            const firstNumber = Math.floor(Math.random() * 100) + 1;
             const secondNumber = 0;
 
             //Act
@@ -68,8 +68,8 @@ describe('Calculadora', () => {
 
         it('Sumar un número A a otro B da el mismo resultado que sumar B a A', () => {
             //Arrange
-            const firstNumber = Math.floor(Math.random());
-            const secondNumber = Math.floor(Math.random());
+            const firstNumber = Math.floor(Math.random() * 100) + 1;
+            const secondNumber = Math.floor(Math.random() * 100) + 1;
 
             //Act
             const result1 = Calculadora.add(firstNumber, secondNumber);
@@ -233,7 +233,7 @@ describe('Calculadora', () => {
 
         it('al restar un número menos 0 devuelve el mismo número', () => {
             //Arrange
-            const firstNumber = Math.floor(Math.random());
+            const firstNumber = Math.floor(Math.random() * 100) + 1;
             const secondNumber = 0;
 
             //Act
