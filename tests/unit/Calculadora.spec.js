@@ -493,4 +493,19 @@ describe('Calculadora', () => {
             expect(result).toBe(NaN);
         });
     });
+
+    describe('División', () => {
+        it('al dividir 6 entre 2 devuelve 3', () => {
+            //Arrange
+            const firstNumber = 6;
+            const secondNumber = 2;
+            const expectedResult = 3;
+
+            //Act
+            const result = Calculadora.divide(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+    });
 });
