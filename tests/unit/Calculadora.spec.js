@@ -342,5 +342,18 @@ describe('Calculadora', () => {
             //Assert
             expect(result).toBe(expectedResult);
         });
+
+        it('al multiplicar 3 por 3 devuelve 9', () => {
+            //Arrange
+            const firstNumber = 3;
+            const secondNumber = 3;
+            const expectedResult = 9;
+
+            //Act
+            const result = Calculadora.multiply(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
     });
 });
