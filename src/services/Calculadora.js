@@ -7,6 +7,6 @@ export default {
     },
 
     subtract(minuend, subtrahend) {
-        return 1;
+        return minuend - subtrahend;
     }
 }
