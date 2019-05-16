@@ -101,4 +101,17 @@ describe('Calculadora', () => {
         //Assert
         expect(result).toBe(NaN);
     });
+
+    it('Si el segundo parámetro es una letra devuelve NaN', () => {
+        //Arrange
+        const firstNumber = 5;
+        const secondNumber = "a";
+
+        //Act
+        const result = Calculadora.add(firstNumber, secondNumber);
+
+        //Assert
+        expect(result).toBe(NaN);
+    });
+
 });
