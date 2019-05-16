@@ -126,5 +126,29 @@ describe('Calculadora', () => {
             //Assert
             expect(result).toBe(NaN);
         });
+
+        it('Si el primer parámetro es un decimal devuelve NaN', () => {
+            //Arrange
+            const firstNumber = 1.1;
+            const secondNumber = 5;
+
+            //Act
+            const result = Calculadora.add(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(NaN);
+        });
+
+        it('Si el segundo parámetro es un decimal devuelve NaN', () => {
+            //Arrange
+            const firstNumber = 5;
+            const secondNumber = 1.1;
+
+            //Act
+            const result = Calculadora.add(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(NaN);
+        });
     });
 });
