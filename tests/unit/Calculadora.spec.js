@@ -51,5 +51,17 @@ describe('Calculadora', () => {
 
         //Assert
         expect(result).toBe(expectedResult);
-    })
+    });
+
+    it('Al sumar 0 a cualquier valor devuelve el mismo valor', () => {
+        //Arrange
+        const firstNumber = Math.floor(Math.random());
+        const secondNumber = 0;
+
+        //Act
+        const result = Calculadora.add(firstNumber, secondNumber);
+
+        //Assert
+        expect(result).toBe(firstNumber);
+    });
 });
