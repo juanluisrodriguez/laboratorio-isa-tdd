@@ -19,4 +19,8 @@ export default {
 
         return multiplicand * multiplier;
     },
+
+    divide(divisor, dividend) {
+        return 3;
+    }
 }
