@@ -7,6 +7,9 @@ export default {
     },
 
     subtract(minuend, subtrahend) {
+        if (!Number.isInteger(minuend)) return NaN;
+        if (!Number.isInteger(subtrahend)) return NaN;
+
         return minuend - subtrahend;
     }
 }
