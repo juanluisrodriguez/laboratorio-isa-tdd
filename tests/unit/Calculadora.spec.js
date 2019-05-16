@@ -165,5 +165,18 @@ describe('Calculadora', () => {
             //Assert
             expect(result).toBe(expectedResult);
         });
+
+        it('al restar 8 menos 3 devuelve 5', () => {
+            //Arrange
+            const firstNumber = 8;
+            const secondNumber = 3;
+            const expectedResult = 5;
+
+            //Act
+            const result = Calculadora.subtract(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
     });
 });
