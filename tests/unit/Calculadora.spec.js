@@ -560,5 +560,17 @@ describe('Calculadora', () => {
             expect(result).toBe(expectedResult);
         });
 
+        it('al dividir 5 entre 2 da 2', () => {
+            //Arrange
+            const firstNumber = 5;
+            const secondNumber = 2;
+            const expectedResult = 2;
+
+            //Act
+            const result = Calculadora.divide(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
     });
 });
