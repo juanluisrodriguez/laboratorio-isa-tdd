@@ -328,4 +328,19 @@ describe('Calculadora', () => {
             expect(result).toBe(NaN);
         });
     });
+
+    describe('Multiplicación', () => {
+        it('al multiplicar 2 por 3 devuelve 6', () => {
+            //Arrange
+            const firstNumber = 2;
+            const secondNumber = 3;
+            const expectedResult = 6;
+
+            //Act
+            const result = Calculadora.multiply(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+    });
 });
