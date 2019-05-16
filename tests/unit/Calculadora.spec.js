@@ -520,5 +520,45 @@ describe('Calculadora', () => {
             //Assert
             expect(result).toBe(expectedResult);
         });
+
+        it('al dividir 12 entre -3 devuelve -4', () => {
+            //Arrange
+            const firstNumber = 12;
+            const secondNumber = -3;
+            const expectedResult = -4;
+
+            //Act
+            const result = Calculadora.divide(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+
+        it('al dividir -20 entre -10 devuelve 2', () => {
+            //Arrange
+            const firstNumber = -20;
+            const secondNumber = -10;
+            const expectedResult = 2;
+
+            //Act
+            const result = Calculadora.divide(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+
+        it('al dividir -20 entre 5 devuelve -4', () => {
+            //Arrange
+            const firstNumber = -20;
+            const secondNumber = 5;
+            const expectedResult = -4;
+
+            //Act
+            const result = Calculadora.divide(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+
     });
 });
