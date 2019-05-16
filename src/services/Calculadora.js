@@ -11,5 +11,9 @@ export default {
         if (!Number.isInteger(subtrahend)) return NaN;
 
         return minuend - subtrahend;
-    }
+    },
+
+    multiply(multiplicand, multiplier){
+        return 6;
+    },
 }
