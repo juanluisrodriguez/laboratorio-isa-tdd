@@ -14,6 +14,6 @@ export default {
     },
 
     multiply(multiplicand, multiplier){
-        return 6;
+        return multiplicand * multiplier;
     },
 }
