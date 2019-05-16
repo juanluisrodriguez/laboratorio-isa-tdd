@@ -355,5 +355,70 @@ describe('Calculadora', () => {
             //Assert
             expect(result).toBe(expectedResult);
         });
+
+        it('al multiplicar 2 por -5 devuelve -10', () => {
+            //Arrange
+            const firstNumber = 2;
+            const secondNumber = -5;
+            const expectedResult = -10;
+
+            //Act
+            const result = Calculadora.multiply(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+
+        it('al multiplicar -3 por -5 devuelve 15', () => {
+            //Arrange
+            const firstNumber = -3;
+            const secondNumber = -5;
+            const expectedResult = 15;
+
+            //Act
+            const result = Calculadora.multiply(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+
+        it('al multiplicar -3 por 4 devuelve -12', () => {
+            //Arrange
+            const firstNumber = -3;
+            const secondNumber = 4;
+            const expectedResult = -12;
+
+            //Act
+            const result = Calculadora.multiply(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+
+        it('al multiplicar cualquier número por 0 da 0', () => {
+            //Arrange
+            const firstNumber = Math.floor(Math.random() * 100) + 1;
+            const secondNumber = 0;
+            const expectedResult = 0;
+
+            //Act
+            const result = Calculadora.multiply(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+
+        it('al multiplicar un número A por otro B da el mismo resultado que multiplicar B por A', () => {
+            //Arrange
+            const firstNumber = Math.floor(Math.random() * 100) + 1;
+            const secondNumber = Math.floor(Math.random() * 100) + 1;
+
+            //Act
+            const result1 = Calculadora.multiply(firstNumber, secondNumber);
+            const result2 = Calculadora.multiply(secondNumber, firstNumber);
+
+            //Assert
+            expect(result1).toBe(result2);
+        });
     });
 });
