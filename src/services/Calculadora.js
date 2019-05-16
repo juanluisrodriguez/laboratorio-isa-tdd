@@ -21,6 +21,6 @@ export default {
     },
 
     divide(divisor, dividend) {
-        return 3;
+        return divisor / dividend;
     }
 }
