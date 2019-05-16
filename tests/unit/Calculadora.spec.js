@@ -420,5 +420,77 @@ describe('Calculadora', () => {
             //Assert
             expect(result1).toBe(result2);
         });
+
+        it('Si el primer parámetro es una letra devuelve NaN', () => {
+            //Arrange
+            const firstNumber = "a";
+            const secondNumber = 5;
+
+            //Act
+            const result = Calculadora.multiply(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(NaN);
+        });
+
+        it('Si el primer parámetro es un string Numérico devuelve NaN', () => {
+            //Arrange
+            const firstNumber = "12";
+            const secondNumber = 5;
+
+            //Act
+            const result = Calculadora.multiply(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(NaN);
+        });
+
+        it('Si el segundo parámetro es una letra devuelve NaN', () => {
+            //Arrange
+            const firstNumber = 5;
+            const secondNumber = "a";
+
+            //Act
+            const result = Calculadora.multiply(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(NaN);
+        });
+
+        it('Si el segundo parámetro es un string Numérico devuelve NaN', () => {
+            //Arrange
+            const firstNumber = 5;
+            const secondNumber = "12";
+
+            //Act
+            const result = Calculadora.multiply(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(NaN);
+        });
+
+        it('Si el primer parámetro es un decimal devuelve NaN', () => {
+            //Arrange
+            const firstNumber = 1.1;
+            const secondNumber = 5;
+
+            //Act
+            const result = Calculadora.multiply(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(NaN);
+        });
+
+        it('Si el segundo parámetro es un decimal devuelve NaN', () => {
+            //Arrange
+            const firstNumber = 5;
+            const secondNumber = 1.1;
+
+            //Act
+            const result = Calculadora.multiply(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(NaN);
+        });
     });
 });
