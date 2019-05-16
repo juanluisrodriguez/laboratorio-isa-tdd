@@ -151,4 +151,19 @@ describe('Calculadora', () => {
             expect(result).toBe(NaN);
         });
     });
+
+    describe('Resta', () => {
+        it('al restar 3 menos 2 devuelve 1', () => {
+            //Arrange
+            const firstNumber = 3;
+            const secondNumber = 2;
+            const expectedResult = 1;
+
+            //Act
+            const result = Calculadora.subtract(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+    });
 });
