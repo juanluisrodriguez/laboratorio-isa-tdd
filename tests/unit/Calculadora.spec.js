@@ -507,5 +507,18 @@ describe('Calculadora', () => {
             //Assert
             expect(result).toBe(expectedResult);
         });
+
+        it('al dividir 12 entre 3 devuelve 4', () => {
+            //Arrange
+            const firstNumber = 12;
+            const secondNumber = 3;
+            const expectedResult = 4;
+
+            //Act
+            const result = Calculadora.divide(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
     });
 });
