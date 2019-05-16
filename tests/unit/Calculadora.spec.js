@@ -178,5 +178,82 @@ describe('Calculadora', () => {
             //Assert
             expect(result).toBe(expectedResult);
         });
+
+        it('al restar 1 menos 3 devuelve -2', () => {
+            //Arrange
+            const firstNumber = 1;
+            const secondNumber = 3;
+            const expectedResult = -2;
+
+            //Act
+            const result = Calculadora.subtract(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+
+        it('al restar -1 menos 3 devuelve -4', () => {
+            //Arrange
+            const firstNumber = -1;
+            const secondNumber = 3;
+            const expectedResult = -4;
+
+            //Act
+            const result = Calculadora.subtract(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+
+        it('al restar -1 menos -3 devuelve 2', () => {
+            //Arrange
+            const firstNumber = -1;
+            const secondNumber = -3;
+            const expectedResult = 2;
+
+            //Act
+            const result = Calculadora.subtract(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+
+        it('al restar 1 menos -3 devuelve 4', () => {
+            //Arrange
+            const firstNumber = 1;
+            const secondNumber = -3;
+            const expectedResult = 4;
+
+            //Act
+            const result = Calculadora.subtract(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+
+        it('al restar un número menos 0 devuelve el mismo número', () => {
+            //Arrange
+            const firstNumber = Math.floor(Math.random());
+            const secondNumber = 0;
+
+            //Act
+            const result = Calculadora.subtract(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(firstNumber);
+        });
+
+        it('al restar 0 menos un número devuelve el mismo número cambiado de signo', () => {
+            //Arrange
+            const firstNumber = 0;
+            const secondNumber = Math.floor(Math.random() * 100) + 1;
+            const expectedResult = -1 * secondNumber;
+
+            //Act
+            const result = Calculadora.subtract(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
     });
 });
