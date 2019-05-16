@@ -21,6 +21,9 @@ export default {
     },
 
     divide(divisor, dividend) {
+        if (!Number.isInteger(divisor)) return NaN;
+        if (!Number.isInteger(dividend)) return NaN;
+
         return (divisor - (divisor % dividend)) / dividend;
     }
 }
