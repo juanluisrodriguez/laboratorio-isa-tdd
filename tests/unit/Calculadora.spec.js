@@ -89,4 +89,16 @@ describe('Calculadora', () => {
         //Assert
         expect(result).toBe(NaN);
     });
+
+    it('Si el primer parámetro es un string Numérico devuelve NaN', () => {
+        //Arrange
+        const firstNumber = "12";
+        const secondNumber = 5;
+
+        //Act
+        const result = Calculadora.add(firstNumber, secondNumber);
+
+        //Assert
+        expect(result).toBe(NaN);
+    });
 });
