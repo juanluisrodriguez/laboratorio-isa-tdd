@@ -1,6 +1,6 @@
 export default {
     add(first, second){
-        if (first == "a") return NaN;
+        if (!Number.isInteger(first)) return NaN;
 
         return first + second;
     }
