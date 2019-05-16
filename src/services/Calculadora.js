@@ -13,7 +13,10 @@ export default {
         return minuend - subtrahend;
     },
 
-    multiply(multiplicand, multiplier){
+    multiply(multiplicand, multiplier) {
+        if (!Number.isInteger(multiplicand)) return NaN;
+        if (!Number.isInteger(multiplier)) return NaN;
+
         return multiplicand * multiplier;
     },
 }
