@@ -64,4 +64,17 @@ describe('Calculadora', () => {
         //Assert
         expect(result).toBe(firstNumber);
     });
+
+    it('Sumar un número A a otro B da el mismo resultado que sumar B a A', () => {
+        //Arrange
+        const firstNumber = Math.floor(Math.random());
+        const secondNumber = Math.floor(Math.random());
+
+        //Act
+        const result1 = Calculadora.add(firstNumber, secondNumber);
+        const result2 = Calculadora.add(secondNumber, firstNumber);
+
+        //Assert
+        expect(result1).toBe(result2);
+    })
 });
