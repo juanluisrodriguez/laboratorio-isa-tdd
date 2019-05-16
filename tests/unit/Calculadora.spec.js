@@ -572,5 +572,31 @@ describe('Calculadora', () => {
             //Assert
             expect(result).toBe(expectedResult);
         });
+
+        it('al dividir 0 entre cualquier número da 0', () => {
+            //Arrange
+            const firstNumber = 0;
+            const secondNumber = Math.floor(Math.random() * 100) + 1;
+            const expectedResult = 0;
+
+            //Act
+            const result = Calculadora.divide(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+
+        it('al dividir cualquier número entre 0 da NaN', () => {
+            //Arrange
+            const firstNumber = Math.floor(Math.random() * 100) + 1;
+            const secondNumber = 0;
+            const expectedResult = NaN;
+
+            //Act
+            const result = Calculadora.divide(firstNumber, secondNumber);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
     });
 });
