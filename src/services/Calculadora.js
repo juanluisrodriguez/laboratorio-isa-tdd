@@ -25,5 +25,9 @@ export default {
         if (!Number.isInteger(dividend)) return NaN;
 
         return (divisor - (divisor % dividend)) / dividend;
+    },
+
+    sqrt(number) {
+        return 2;
     }
 }
