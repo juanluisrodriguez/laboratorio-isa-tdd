@@ -671,4 +671,18 @@ describe('Calculadora', () => {
             expect(result).toBe(NaN);
         });
     });
+
+    describe('Raíz Cuadrada', () => {
+        it('al hacer la raíz cuadrada de 4 da 2', () => {
+            //Arrange
+            const number = 6;
+            const expectedResult = 2;
+
+            //Act
+            const result = Calculadora.sqrt(number);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+    });
 });
