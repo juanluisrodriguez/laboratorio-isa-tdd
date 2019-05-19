@@ -28,6 +28,8 @@ export default {
     },
 
     sqrt(number) {
+        if (number === 0) return 0;
+
         let result = 1;
 
         for (result; result <= number / 2; result++) {
