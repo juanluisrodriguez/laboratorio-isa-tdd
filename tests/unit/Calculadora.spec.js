@@ -722,5 +722,17 @@ describe('Calculadora', () => {
             //Assert
             expect(Math.abs(result-realResult)).toBeLessThan(precision);
         });
+
+        it('al hacer la raíz cuadrada de 0 se obtiene 0', () => {
+            //Arrange
+            const number = 0;
+            const expectedResult = 0;
+
+            //Act
+            const result = Calculadora.sqrt(number);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
     });
 });
