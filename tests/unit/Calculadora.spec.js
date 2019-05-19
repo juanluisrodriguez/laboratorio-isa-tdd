@@ -734,5 +734,38 @@ describe('Calculadora', () => {
             //Assert
             expect(result).toBe(expectedResult);
         });
+
+        it('al intentar hacer la raiz cuadrada de una letra se obtiene NaN', () => {
+            //Arrange
+            const number = 'a';
+
+            //Act
+            const result = Calculadora.sqrt(number);
+
+            //Assert
+            expect(result).toBe(NaN);
+        });
+
+        it('al intentar hacer la raiz cuadrada de un string numérico se obtiene NaN', () => {
+            //Arrange
+            const number = '12';
+
+            //Act
+            const result = Calculadora.sqrt(number);
+
+            //Assert
+            expect(result).toBe(NaN);
+        });
+
+        it('al intentar hacer la raiz cuadrada de un decimal se obtiene NaN', () => {
+            //Arrange
+            const number = 5.5;
+
+            //Act
+            const result = Calculadora.sqrt(number);
+
+            //Assert
+            expect(result).toBe(NaN);
+        });
     });
 });
