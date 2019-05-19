@@ -696,5 +696,18 @@ describe('Calculadora', () => {
             //Assert
             expect(result).toBe(expectedResult);
         });
+
+        it('al hacer la raíz cuadrada de 10 se obtiene un resultado con precisión mayor a 0,00001', () => {
+            //Arrange
+            const number = 10;
+            const realResult = Math.sqrt(number);
+            const precision = 0.00001;
+
+            //Act
+            const result = Calculadora.sqrt(number);
+
+            //Assert
+            expect(Math.abs(result-realResult)).toBeLessThan(precision);
+        });
     });
 });
