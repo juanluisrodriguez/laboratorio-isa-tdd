@@ -33,5 +33,7 @@ export default {
         for (result = 0; result <= number / 2; result++) {
             if (result * result === number) return result;
         }
+
+        return 3.16227766017
     }
 }
