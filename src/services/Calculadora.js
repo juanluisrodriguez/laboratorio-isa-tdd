@@ -40,6 +40,7 @@ export default {
             if (result * result > number) break;
         }
 
+        result = 1;
         for (let i = 0; i < number; i++) {
             result = 0.5 * (result + number / result);
         }
