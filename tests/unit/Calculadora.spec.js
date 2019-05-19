@@ -675,8 +675,20 @@ describe('Calculadora', () => {
     describe('Raíz Cuadrada', () => {
         it('al hacer la raíz cuadrada de 4 da 2', () => {
             //Arrange
-            const number = 6;
+            const number = 4;
             const expectedResult = 2;
+
+            //Act
+            const result = Calculadora.sqrt(number);
+
+            //Assert
+            expect(result).toBe(expectedResult);
+        });
+
+        it('al hacer la raíz cuadrada de 25 da 5', () => {
+            //Arrange
+            const number = 25;
+            const expectedResult = 5;
 
             //Act
             const result = Calculadora.sqrt(number);
