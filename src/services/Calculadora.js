@@ -34,6 +34,12 @@ export default {
             if (result * result === number) return result;
         }
 
-        return 3.16227766017
+        result = 1;
+
+        for (let i = 0; i < number; i++) {
+            result = 0.5 * (result + number / result);
+        }
+
+        return result;
     }
 }
