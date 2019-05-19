@@ -28,13 +28,12 @@ export default {
     },
 
     sqrt(number) {
-        let result = 0;
+        let result = 1;
 
-        for (result = 0; result <= number / 2; result++) {
+        for (result; result <= number / 2; result++) {
             if (result * result === number) return result;
+            if (result * result > number) break;
         }
-
-        result = 1;
 
         for (let i = 0; i < number; i++) {
             result = 0.5 * (result + number / result);
