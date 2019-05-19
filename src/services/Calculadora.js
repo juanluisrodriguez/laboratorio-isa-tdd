@@ -29,6 +29,7 @@ export default {
 
     sqrt(number) {
         if (!Number.isInteger(number)) return NaN;
+        if (number < 0) return NaN;
 
         if (number === 0) return 0;
 
